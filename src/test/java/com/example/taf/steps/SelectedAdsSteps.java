@@ -1,13 +1,13 @@
 package com.example.taf.steps;
 
-import com.example.taf.pages.SelectedAdsPage;
+import com.example.taf.pages.PageWithAds;
 import net.thucydides.core.annotations.Step;
 
 import java.util.List;
 
 public class SelectedAdsSteps {
 
-    private SelectedAdsPage selectedAdsPage;
+    private PageWithAds selectedAdsPage;
 
     @Step
     public List<String> getDisplayedAdIds() {

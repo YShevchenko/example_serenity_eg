@@ -1,6 +1,6 @@
 package com.example.taf.scenarios;
 
-import com.example.taf.dto.ExtendedSearchParametersDto;
+import com.example.taf.dto.ExtendedSearchDto;
 import com.example.taf.steps.SearchSteps;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.When;
@@ -13,7 +13,7 @@ public class SearchScenario {
 
     @When("user performs {extended |}search with next details:$table")
     public void performSearch(final ExamplesTable table) {
-        final ExtendedSearchParametersDto searchParameters = table.getRowsAs(ExtendedSearchParametersDto.class).get(0);
+        final ExtendedSearchDto searchParameters = table.getRowsAs(ExtendedSearchDto.class).get(0);
         searchSteps.navigateToSearchPage();
         searchSteps.performSearch(searchParameters);
     }
@@ -23,7 +23,7 @@ public class SearchScenario {
         searchSteps.sortByPrice();
     }
 
-    @When("user selects deal type <$dealType> filters on search results page")
+    @When("user selects deal type <$dealType> on search results page")
     public void applyHeadLineSearchFilters(final String dealType) {
         searchSteps.applyDealType(dealType);
     }
@@ -35,7 +35,7 @@ public class SearchScenario {
 
     @When("user navigates to Selected Ads page")
     public void navigateToSelectedAdsPage() {
-        searchSteps.clickSelectedAdsPageLink();
+        searchSteps.clickSelectedAdsLink();
     }
 
 }

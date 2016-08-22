@@ -6,7 +6,7 @@ And user performs search with next details:
 | searchQuery | minPrice | maxPrice | subDivision | region | searchPeriod       | sortBy |
 | Компьютер   |          |          |             | Рига   | За последний месяц |        |
 And user sorts results by price
-And user selects deal type <Продажа> filters on search results page
+And user selects deal type <Продажа> on search results page
 And user performs extended search with next details:
 | searchQuery | minPrice | maxPrice | subDivision | region | searchPeriod       | sortBy |
 | Компьютер   | 0        | 300      |             | Рига   | За последний месяц |        |

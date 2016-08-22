@@ -22,7 +22,7 @@ public final class TestSessionUtils {
         try {
             result = returnType.cast(obj);
         } catch (final ClassCastException e) {
-            e.printStackTrace();
+            throw new ClassCastException("Object to store and key should not be null");
         }
         return result;
     }

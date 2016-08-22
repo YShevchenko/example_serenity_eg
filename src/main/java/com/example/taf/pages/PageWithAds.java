@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-public abstract class PageWithAds extends GeneralPage {
+public class PageWithAds extends GeneralPage {
 
     @FindBy(xpath = ".//table[@id='page_main']//tr[contains(@id,'tr_')]")
     private List<SearchResultWidget> searchResultWidgets;

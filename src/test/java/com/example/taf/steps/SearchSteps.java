@@ -1,6 +1,6 @@
 package com.example.taf.steps;
 
-import com.example.taf.dto.ExtendedSearchParametersDto;
+import com.example.taf.dto.ExtendedSearchDto;
 import com.example.taf.pages.search.ExtendedSearchPage;
 import com.example.taf.pages.search.SearchResultsPage;
 import net.thucydides.core.annotations.Step;
@@ -19,7 +19,7 @@ public class SearchSteps {
     }
 
     @Step
-    public void performSearch(final ExtendedSearchParametersDto searchParams) {
+    public void performSearch(final ExtendedSearchDto searchParams) {
         try {
             BeanUtils.copyProperties(searchPage.getSearchFormWidget(), searchParams);
         } catch (IllegalAccessException | InvocationTargetException e) {
@@ -41,13 +41,13 @@ public class SearchSteps {
     @Step
     public void selectRandomAds(final int adCount) {
         if (searchResultsPage.getSearchResultsCount() < adCount) {
-            throw new IllegalArgumentException("Count of ads to choose should be > search results count!");
+            throw new IllegalArgumentException("Count of ads to choose should be > search results count");
         }
         searchResultsPage.selectRandomAds(adCount);
     }
 
     @Step
-    public void clickSelectedAdsPageLink() {
+    public void clickSelectedAdsLink() {
         searchResultsPage.clickSelectedAdsPageLink();
     }
 }

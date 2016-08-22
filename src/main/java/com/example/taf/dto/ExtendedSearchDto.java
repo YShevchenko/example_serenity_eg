@@ -1,6 +1,6 @@
 package com.example.taf.dto;
 
-public class ExtendedSearchParametersDto {
+public class ExtendedSearchDto {
 
     private String searchQuery;
     private String minPrice;
